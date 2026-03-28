@@ -1,0 +1,33 @@
+{
+	"name": "zod-mask",
+	"version": "0.1.0",
+	"homepage": "https://github.com/vhespanha/zod-mask#readme",
+	"bugs": {
+		"url": "https://github.com/vhespanha/zod-mask/issues"
+	},
+	"license": "MIT",
+	"files": [
+		"index.ts",
+		"LICENSE",
+		"README.md"
+	],
+	"type": "module",
+	"module": "index.ts",
+	"scripts": {
+		"fmt": "oxfmt",
+		"fmt:check": "oxfmt --check",
+		"test:runtime": "bun test tests/runtime.test.ts",
+		"test:types": "tsc --ignoreConfig --noEmit --module preserve --moduleResolution bundler --target esnext --lib esnext --types bun --strict --skipLibCheck index.ts tests/types.test.ts",
+		"test": "bun test:runtime && bun test:types"
+	},
+	"dependencies": {
+		"zod": "^4.3.6"
+	},
+	"devDependencies": {
+		"@types/bun": "latest",
+		"oxfmt": "^0.42.0"
+	},
+	"peerDependencies": {
+		"typescript": "^v6.0.2"
+	}
+}
