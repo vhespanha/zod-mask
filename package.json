@@ -1,6 +1,6 @@
 {
 	"name": "zod-mask",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "Semantically mask fields out of Zod schemas.",
 	"keywords": [
 		"crud",
