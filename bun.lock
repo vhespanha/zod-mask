@@ -4,15 +4,13 @@
   "workspaces": {
     "": {
       "name": "zod-mask",
-      "dependencies": {
-        "zod": "^4.3.6",
-      },
       "devDependencies": {
         "@types/bun": "latest",
         "oxfmt": "^0.42.0",
       },
       "peerDependencies": {
         "typescript": "^v6.0.2",
+        "zod": "^4.3.6",
       },
     },
   },

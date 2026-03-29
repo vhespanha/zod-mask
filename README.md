@@ -33,7 +33,7 @@ Import both Zod and zod-mask:
 
 ```typescript
 import * as z from 'zod';
-import * as zm from 'zod-mask';
+import 'zod-mask';
 ```
 
 Define your schema as usual, then annotate each field with the views it belongs

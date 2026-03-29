@@ -1,33 +1,38 @@
 {
 	"name": "zod-mask",
-	"version": "0.1.0",
+	"version": "0.1.1",
+	"description": "Semantically mask fields out of Zod schemas.",
+	"keywords": [
+		"crud",
+		"validation",
+		"zod"
+	],
 	"homepage": "https://github.com/vhespanha/zod-mask#readme",
 	"bugs": {
 		"url": "https://github.com/vhespanha/zod-mask/issues"
 	},
 	"license": "MIT",
+	"author": "Vinicius Hespanha Souza <mail@vhespanha.dev>",
 	"files": [
-		"index.ts",
+		"main.ts",
 		"LICENSE",
 		"README.md"
 	],
 	"type": "module",
-	"module": "index.ts",
+	"module": "main.ts",
 	"scripts": {
 		"fmt": "oxfmt",
 		"fmt:check": "oxfmt --check",
 		"test:runtime": "bun test tests/runtime.test.ts",
-		"test:types": "tsc --ignoreConfig --noEmit --module preserve --moduleResolution bundler --target esnext --lib esnext --types bun --strict --skipLibCheck index.ts tests/types.test.ts",
-		"test": "bun test:runtime && bun test:types"
-	},
-	"dependencies": {
-		"zod": "^4.3.6"
+		"test:types": "tsc --noEmit",
+		"test:all": "bun test:runtime && bun test:types"
 	},
 	"devDependencies": {
 		"@types/bun": "latest",
 		"oxfmt": "^0.42.0"
 	},
 	"peerDependencies": {
-		"typescript": "^v6.0.2"
+		"typescript": "^v6.0.2",
+		"zod": "^4.3.6"
 	}
 }

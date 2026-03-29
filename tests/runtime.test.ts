@@ -1,6 +1,6 @@
 import { expect, test } from 'bun:test';
 import * as z from 'zod';
-import '../index.js';
+import '../main';
 
 const User = z.object({
 	id: z.uuid().mask('read'),
